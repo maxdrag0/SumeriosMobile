@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.App.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/sumerio_rojo_oscuro</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/sumerios</item>
+        <item name="windowSplashScreenAnimationDuration">500</item>
+        <item name="postSplashScreenTheme">@style/Theme.SumeriosMobile</item>
+    </style>
+
+    <style name="Theme.SumeriosMobile" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>

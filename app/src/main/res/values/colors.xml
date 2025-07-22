@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sumerio_rojo_claro">#bf3641</color>
+    <color name="sumerio_rojo_oscuro">#8c3030</color>
+    <color name="sumerio_marro">#bf9341</color>
+    <color name="sumerio_crema">#f2e399</color>
+    <color name="sumerio_select">#e8d160</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+</resources>

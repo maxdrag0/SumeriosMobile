@@ -4,10 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
-import ar.mad.sumeriosmobile.screens.welcome.WelcomeViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

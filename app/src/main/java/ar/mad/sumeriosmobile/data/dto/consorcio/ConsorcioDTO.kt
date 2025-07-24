@@ -1,6 +1,6 @@
-package ar.mad.sumeriosmobile.data.dto
+package ar.mad.sumeriosmobile.data.dto.consorcio
 
-import ar.mad.sumeriosmobile.data.dto.EstadoCuentaConsorcioDTO
+import ar.mad.sumeriosmobile.data.dto.consorcioEstadoCuenta.EstadoCuentaConsorcioDTO
 import ar.mad.sumeriosmobile.data.dto.enum.TipoCuenta
 import kotlinx.serialization.Serializable
 

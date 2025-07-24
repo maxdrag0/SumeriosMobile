@@ -1,4 +1,4 @@
-package ar.mad.sumeriosmobile.screens.login
+package ar.mad.sumeriosmobile.presentation.login
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement

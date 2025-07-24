@@ -1,4 +1,4 @@
-package ar.mad.sumeriosmobile.screens.register
+package ar.mad.sumeriosmobile.presentation.register
 
 import androidx.lifecycle.ViewModel
 

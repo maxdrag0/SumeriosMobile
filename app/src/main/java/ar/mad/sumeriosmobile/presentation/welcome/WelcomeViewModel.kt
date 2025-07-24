@@ -1,4 +1,4 @@
-package ar.mad.sumeriosmobile.screens.welcome
+package ar.mad.sumeriosmobile.presentation.welcome
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

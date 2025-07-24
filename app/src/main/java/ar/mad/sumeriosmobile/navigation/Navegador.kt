@@ -4,10 +4,10 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import ar.mad.sumeriosmobile.screens.home.HomeScreen
-import ar.mad.sumeriosmobile.screens.login.LoginScreen
-import ar.mad.sumeriosmobile.screens.register.RegisterScreen
-import ar.mad.sumeriosmobile.screens.welcome.WelcomeScreen
+import ar.mad.sumeriosmobile.presentation.home.HomeScreen
+import ar.mad.sumeriosmobile.presentation.login.LoginScreen
+import ar.mad.sumeriosmobile.presentation.register.RegisterScreen
+import ar.mad.sumeriosmobile.presentation.welcome.WelcomeScreen
 
 @Composable
 fun Navegador() {

@@ -1,5 +1,7 @@
 package ar.mad.sumeriosmobile.data.dto
 
+import ar.mad.sumeriosmobile.data.dto.consorcio.ConsorcioDTO
+
 val consorciosDePrueba = listOf(
     ConsorcioDTO(1L, "Consorcio Las Palmas", "Av. Siempre Viva 742", "Buenos Aires"),
     ConsorcioDTO(2L, "Edificio Horizonte", "Calle Falsa 123", "Córdoba"),

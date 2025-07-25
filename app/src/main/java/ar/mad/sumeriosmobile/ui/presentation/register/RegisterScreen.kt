@@ -1,4 +1,4 @@
-package ar.mad.sumeriosmobile.presentation.welcome
+package ar.mad.sumeriosmobile.ui.presentation.register
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Arrangement
@@ -18,41 +18,46 @@ import androidx.compose.ui.unit.sp
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun WelcomeScreen(onLoginSelect: () -> Unit,
-                  onRegisterSelect: () -> Unit){
+fun RegisterScreen(
+    onLoginSelect: () -> Unit,
+    onWelcomeSelect: () -> Unit
+) {
     Scaffold {
-        Column(modifier = Modifier.fillMaxSize()
-            .padding(10.dp),
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(10.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center)
+            verticalArrangement = Arrangement.Center
+        )
         {
 
-            Text("Welcome")
+            Text("REGISTRO")
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(16.dp), // separa botones
                 verticalAlignment = Alignment.CenterVertically
-            ){
-                Button (
+            ) {
+                Button(
+                    onClick = {
+                        onWelcomeSelect()
+                    },
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text(
+                        text = "WELCOME",
+                        fontSize = 20.sp
+                    )
+                }
+
+                Button(
                     onClick = {
                         onLoginSelect()
                     },
                     modifier = Modifier.weight(1f)
                 ) {
-                    Text (
+                    Text(
                         text = "LOG IN",
-                        fontSize = 20.sp
-                    )
-                }
-
-                Button (
-                    onClick = {
-                        onRegisterSelect()
-                    },
-                    modifier = Modifier.weight(1f)
-                ) {
-                    Text (
-                        text = "REGISTRO",
                         fontSize = 20.sp
                     )
                 }

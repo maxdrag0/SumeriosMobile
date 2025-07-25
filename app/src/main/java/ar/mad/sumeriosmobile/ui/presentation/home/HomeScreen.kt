@@ -1,4 +1,4 @@
-package ar.mad.sumeriosmobile.presentation.home
+package ar.mad.sumeriosmobile.ui.presentation.home
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -36,30 +36,33 @@ import ar.mad.sumeriosmobile.ui.components.SumeriosTopBarBase
 
 @Preview(showBackground = true)
 @Composable
-fun HomeScreenPreview(){
+fun HomeScreenPreview() {
     HomeScreen()
 }
 
 @SuppressLint("SuspiciousIndentation")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(){
+fun HomeScreen() {
 
-            Scaffold(
+    Scaffold(
+        modifier = Modifier
+            .fillMaxSize(),
+        {
+            SumeriosTopBarBase(
+                scrollBehavior = null,
+                onMenuClick = { /* Abrir drawer o menú */ },
+                onProfileClick = { /* Navegar a perfil */ }
+            )
+        },
+        bottomBar = { SumeriosBottomBar() }
+    ) { innerPadding ->
+        HomeContent(
             modifier = Modifier
-                .fillMaxSize(),
-            {
-                SumeriosTopBarBase(
-                    scrollBehavior = null,
-                    onMenuClick = { /* Abrir drawer o menú */ },
-                    onProfileClick = { /* Navegar a perfil */ }
-                )
-            },
-            bottomBar = { SumeriosBottomBar() }
-        ) { innerPadding ->
-            HomeContent(modifier = Modifier.padding(innerPadding)
-                .fillMaxSize())
-        }
+                .padding(innerPadding)
+                .fillMaxSize()
+        )
+    }
 }
 
 @Composable

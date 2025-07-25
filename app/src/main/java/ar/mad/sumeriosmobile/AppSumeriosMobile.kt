@@ -7,7 +7,7 @@ import ar.mad.sumeriosmobile.navigation.Navegador
 @Preview(showBackground = true)
 @Composable
 fun AppSumeriosMobilePreview() {
-        AppSumeriosMobile()
+    AppSumeriosMobile()
 }
 
 @Composable

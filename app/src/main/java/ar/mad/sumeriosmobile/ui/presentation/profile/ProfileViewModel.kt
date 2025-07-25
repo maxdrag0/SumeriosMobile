@@ -1,4 +1,4 @@
-package ar.mad.sumeriosmobile.presentation.profile
+package ar.mad.sumeriosmobile.ui.presentation.profile
 
 import androidx.lifecycle.ViewModel
 

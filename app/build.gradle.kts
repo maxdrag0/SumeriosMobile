@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("com.google.dagger.hilt.android")
+    kotlin("kapt")
 }
 
 android {
@@ -60,7 +62,19 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.logging.interceptor)
 
-    
+    // HILT
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.datastore.core.android)
+    kapt(libs.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
+
+    // DataStore Preferences
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+// Para coroutines si aún no lo tenés
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

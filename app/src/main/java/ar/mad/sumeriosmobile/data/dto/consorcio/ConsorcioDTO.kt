@@ -1,8 +1,8 @@
 package ar.mad.sumeriosmobile.data.dto.consorcio
 
-import ar.mad.sumeriosmobile.data.dto.consorcioEstadoCuenta.EstadoCuentaConsorcioDTO
-import ar.mad.sumeriosmobile.data.dto.enum.TipoCuenta
+import ar.mad.sumeriosmobile.domain.model.ConsorcioDomain
 import kotlinx.serialization.Serializable
+
 
 @Serializable
 data class ConsorcioDTO(
@@ -22,4 +22,11 @@ data class ConsorcioDTO(
 //    var porcentajeSegundoVencimiento: Double,
 //    var estadoCuentaConsorcioDTO: EstadoCuentaConsorcioDTO,
 //    var idAdm: Long,
-)
+) {
+    fun toDomain() = ConsorcioDomain(
+        id = idConsorcio,
+        nombre = nombre,
+        direccion = direccion,
+        ciudad = ciudad
+    )
+}

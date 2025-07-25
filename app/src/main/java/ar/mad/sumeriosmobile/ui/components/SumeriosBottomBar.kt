@@ -11,7 +11,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ar.mad.sumeriosmobile.R
@@ -30,12 +29,18 @@ fun SumeriosBottomBar() {
             horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Text("Inicio",
-                fontSize = 20.sp)
-            Text("Consorcios",
-                fontSize = 20.sp)
-            Text("Perfil",
-                fontSize = 20.sp)
+            Text(
+                "Inicio",
+                fontSize = 20.sp
+            )
+            Text(
+                "Consorcios",
+                fontSize = 20.sp
+            )
+            Text(
+                "Perfil",
+                fontSize = 20.sp
+            )
         }
     }
 }

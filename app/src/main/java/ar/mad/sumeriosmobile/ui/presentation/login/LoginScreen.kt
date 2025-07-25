@@ -1,4 +1,4 @@
-package ar.mad.sumeriosmobile.presentation.login
+package ar.mad.sumeriosmobile.ui.presentation.login
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -34,21 +34,26 @@ import ar.mad.sumeriosmobile.R
 
 
 @Composable
-fun LoginScreen(onLoginSuccess: () -> Unit,
-                onBackToWelcome: () -> Unit,
-                onRegisterRoad: () -> Unit) {
+fun LoginScreen(
+    onLoginSuccess: () -> Unit,
+    onBackToWelcome: () -> Unit,
+    onRegisterRoad: () -> Unit
+) {
     CuerpoLogin(onLoginSuccess, onBackToWelcome, onRegisterRoad)
 }
 
 @Composable
-fun CuerpoLogin(onLoginSuccess: () -> Unit,
-                onBackToWelcome: () -> Unit,
-                onRegisterRoad: () -> Unit) {
+fun CuerpoLogin(
+    onLoginSuccess: () -> Unit,
+    onBackToWelcome: () -> Unit,
+    onRegisterRoad: () -> Unit
+) {
     var usuario by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
     Column(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier
+            .fillMaxSize()
             .padding(10.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
@@ -56,7 +61,8 @@ fun CuerpoLogin(onLoginSuccess: () -> Unit,
         Icon(
             painter = painterResource(id = R.drawable.outline_account_circle_24),
             contentDescription = "",
-            modifier = Modifier.height(100.dp)
+            modifier = Modifier
+                .height(100.dp)
                 .width(100.dp),
             tint = Color.Gray
         )
@@ -70,12 +76,18 @@ fun CuerpoLogin(onLoginSuccess: () -> Unit,
         Spacer(Modifier.height(20.dp))
 
         TextField(
-            value= usuario,
-            onValueChange = {usuario=it},
-            leadingIcon = {Icon(imageVector = Icons.Default.Person, contentDescription = "Usuario")},
+            value = usuario,
+            onValueChange = { usuario = it },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.Person,
+                    contentDescription = "Usuario"
+                )
+            },
             shape = RoundedCornerShape(25.dp),
-            placeholder = {Text(text = "Usuario")},
-            modifier = Modifier.fillMaxWidth()
+            placeholder = { Text(text = "Usuario") },
+            modifier = Modifier
+                .fillMaxWidth()
                 .border(width = 1.dp, shape = RoundedCornerShape(25.dp), color = Color.Gray),
             colors = TextFieldDefaults.colors(
                 focusedTextColor = Color.Black,
@@ -91,12 +103,18 @@ fun CuerpoLogin(onLoginSuccess: () -> Unit,
         Spacer(Modifier.height(10.dp))
 
         TextField(
-            value= password,
-            onValueChange = {password=it},
-            leadingIcon = {Icon(imageVector = Icons.Default.Lock, contentDescription = "Password")},
+            value = password,
+            onValueChange = { password = it },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.Lock,
+                    contentDescription = "Password"
+                )
+            },
             shape = RoundedCornerShape(25.dp),
-            placeholder = {Text(text = "Contraseña")},
-            modifier = Modifier.fillMaxWidth()
+            placeholder = { Text(text = "Contraseña") },
+            modifier = Modifier
+                .fillMaxWidth()
                 .border(width = 1.dp, shape = RoundedCornerShape(25.dp), color = Color.Gray),
             colors = TextFieldDefaults.colors(
                 focusedTextColor = Color.Black,
@@ -111,37 +129,37 @@ fun CuerpoLogin(onLoginSuccess: () -> Unit,
 
         Spacer(Modifier.height(20.dp))
 
-        Button (
+        Button(
             onClick = {
                 onBackToWelcome()
             },
             modifier = Modifier.width(400.dp)
         ) {
-            Text (
+            Text(
                 text = "Welcome",
                 fontSize = 20.sp
             )
         }
 
-        Button (
+        Button(
             onClick = {
                 onRegisterRoad()
             },
             modifier = Modifier.width(400.dp)
         ) {
-            Text (
+            Text(
                 text = "Registrarse",
                 fontSize = 20.sp
             )
         }
 
-        Button (
+        Button(
             onClick = {
                 onLoginSuccess()
             },
             modifier = Modifier.width(400.dp)
         ) {
-            Text (
+            Text(
                 text = "Entrar",
                 fontSize = 20.sp
             )
